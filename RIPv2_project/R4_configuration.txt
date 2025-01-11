@@ -1,0 +1,52 @@
+1.General information
+
+-> Router model: Cisco ISR4331/K9
+-> Role in network: R4 connect LAN (192.168.3.0/24) to main WAN network (200.200.200.0/24),
+R4 uses RIPv2 for dynamic Routing
+
+2.Basic configuration
+
+->Name: R4
+->IP addresses:
+	interface GigabitEthernet0/0/0
+ 	ip address 192.168.3.1 255.255.255.0
+	
+	interface Serial0/2/1
+	ip address 10.0.0.17 255.255.255.252
+
+	interface Serial0/1/1
+	ip address 10.0.0.14 255.255.255.252
+
+3.Routing information:
+-> Dynamic routing networks: 192.168.3.0/24, 10.0.0.12/30, 10.0.0.16/30
+-> Interface Serial0/2/1 and Serial0/1/1 send RIP updates
+	router rip
+ 	version 2
+ 	passive-interface GigabitEthernet0/0/0
+ 	network 10.0.0.0
+ 	network 192.168.3.0
+
+4.Security access
+->Console password:
+	line con 0
+ 	password 7 082243401A160912 (console after decode)
+ 	login
+
+->Enable mode password:
+	enable secret 5 $1$mERr$9cTjUIEqNGurQiFU.ZeCi1 (class after decode)
+
+->Vty:
+	line vty 0 4
+ 	login local
+ 	transport input ssh
+	
+	line vty 5 15
+ 	login local
+ 	transport input ssh
+	
+	username admin secret 5 $1$mERr$GvDaTJK9lhdXRUPWKA74O0 (password after decode)
+
+	ip ssh version 2
+ 	transport input ssh
+	
+	
