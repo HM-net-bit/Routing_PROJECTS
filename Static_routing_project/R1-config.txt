@@ -1,0 +1,57 @@
+1. General inforation about R1 configuration
+
+->Router model: CISCO ISR4331/K9
+->Role in network: R1 connects two LANs 192.168.1.0/24(BACKUP LAN) and 192.168.2.0/24 with other LANs using static routing
+
+2.Basic configuration:
+
+->Hostname: R1
+->IP addressation:
+	interface GigabitEthernet0/0/0
+	ip address 192.168.1.1 255.255.255.0
+	
+	interface GigabitEthernet0/0/1
+ 	ip address 192.168.2.1 255.255.255.0
+ 	
+	interface Serial0/1/0
+	ip address 10.0.0.1 255.255.255.252
+	
+->Static routing:
+	ip route 192.168.3.0 255.255.255.0 10.0.0.2 
+	ip route 192.168.4.0 255.255.255.0 10.0.0.2 
+	ip route 192.168.5.0 255.255.255.0 10.0.0.2 
+	ip route 192.168.6.0 255.255.255.0 10.0.0.2 
+	ip route 192.168.7.0 255.255.255.0 10.0.0.2 
+	ip route 10.0.0.8 255.255.255.252 10.0.0.2 
+	ip route 10.0.0.4 255.255.255.252 10.0.0.2 
+
+3. Security:
+
+->Console password:	
+	line con 0
+ 	password 7 082243401A160912 (console after decode)
+ 	login
+	service password-encryption
+
+->Enable mode password:
+	enable secret 5 $1$mERr$9cTjUIEqNGurQiFU.ZeCi1 (class after decode)
+
+->Vty:
+	line vty 0 4
+ 	login local
+ 	transport input ssh
+	
+	line vty 5 15
+ 	login local
+ 	transport input ssh
+
+->Saving running configuration using TFTP
+
+	R1#copy running-config tftp: 
+	Address or name of remote host []? 192.168.1.2
+	Destination filename [R1-confg]? 
+
+	Writing running-config...!!
+	[OK - 1366 bytes]
+
+	1366 bytes copied in 0.003 secs (455333 bytes/sec)

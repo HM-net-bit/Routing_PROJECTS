@@ -1,0 +1,57 @@
+1.PING FROM PC7 to PC2
+C:\>ping 192.168.2.2
+
+Pinging 192.168.2.2 with 32 bytes of data:
+
+Request timed out.
+Reply from 192.168.2.2: bytes=32 time=13ms TTL=125
+Reply from 192.168.2.2: bytes=32 time=17ms TTL=125
+Reply from 192.168.2.2: bytes=32 time=3ms TTL=125
+
+2.PING FROM PC5 to Server BACKUP
+C:\>ping 192.168.1.2
+
+Pinging 192.168.1.2 with 32 bytes of data:
+
+Reply from 192.168.1.2: bytes=32 time=12ms TTL=126
+Reply from 192.168.1.2: bytes=32 time=2ms TTL=126
+Reply from 192.168.1.2: bytes=32 time=14ms TTL=126
+Reply from 192.168.1.2: bytes=32 time=13ms TTL=126
+
+3.PING FROM PC3 to PC6, the longest path in network (three routers)
+C:\>ping 192.168.6.2
+
+Pinging 192.168.6.2 with 32 bytes of data:
+
+Request timed out.
+Reply from 192.168.6.2: bytes=32 time=2ms TTL=125
+Reply from 192.168.6.2: bytes=32 time=13ms TTL=125
+Reply from 192.168.6.2: bytes=32 time=21ms TTL=125
+
+4.SSH CONNECTION FROM PC7 to R1
+C:\>ssh -l admin 10.0.0.1
+
+Password: 
+
+WELCOME ADMINISTATORS IN R1 CONFIGURATION
+
+5.SSH CONNECTION FROM PC5 to R2
+C:\>ssh -l admin 10.0.0.6
+
+Password: 
+
+WELCOME ADMINISTATORS IN R2 CONFIGURATION
+
+6.SSH CONNECTION FROM PC6 to R4
+C:\>ssh -l admin 10.0.0.9
+
+Password: 
+
+WELCOME ADMINISTATORS IN R4 CONFIGURATION
+
+7. SSH CONNECTION FROM SERVER BACKUP to R5
+C:\>ssh -l admin 10.0.0.10
+
+Password: 
+
+WELCOME ADMINISTATORS IN R5 CONFIGURATION
