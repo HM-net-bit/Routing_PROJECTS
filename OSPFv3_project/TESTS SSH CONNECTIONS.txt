@@ -1,0 +1,37 @@
+1. SSH connection from PC2 to Router0
+C:\>ssh 
+Cisco Packet Tracer PC SSH
+
+Usage: SSH -l username target
+
+C:\>ssh -l adminr0 2001:2::2
+
+Password: 
+
+Password: 
+
+
+
+R0_MAIN>
+
+2. SSH connection from PC11 to Router2
+C:\>ssh -l adminr2 2001:2::1
+
+Password: 
+
+Password: 
+
+
+
+R2>
+
+3. SSH connection from PC15 to Router4
+C:\>ssh -l adminr4 2001:4::2
+
+Password: 
+
+Password: 
+
+
+
+R4>

@@ -1,0 +1,82 @@
+Router R1
+
+OS Version: 15.4
+
+Hostname: R1
+
+IPv6 Routing: Enabled
+
+OSPF Configuration:
+	Router ID: 1.1.1.1
+	Interfaces in OSPF Area 0
+
+Interfaces:
+	GigabitEthernet0/0/0 - IPv6: 2002::1/64
+	GigabitEthernet0/0/1 - IPv6: 2002:1::1/64
+	Serial0/1/0 - IPv6: 2001:1::2/64
+
+Authentication:
+	Enable Password: r1
+	Console Password: r1
+	SSH Username: adminr1
+	SSH Password: r1r1r1
+
+Security: Password encryption enabled, SSH access enabled
+
+Routing table:
+C   2001:1::/64 [0/0]
+     via Serial0/1/0, directly connected
+L   2001:1::2/128 [0/0]
+     via Serial0/1/0, receive
+O   2001:2::/64 [110/128]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2001:3::/64 [110/192]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2001:4::/64 [110/256]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2001:5::/64 [110/256]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2001:6::/64 [110/192]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2001:7::/64 [110/192]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2001:8::/64 [110/256]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+C   2002::/64 [0/0]
+     via GigabitEthernet0/0/0, directly connected
+L   2002::1/128 [0/0]
+     via GigabitEthernet0/0/0, receive
+C   2002:1::/64 [0/0]
+     via GigabitEthernet0/0/1, directly connected
+L   2002:1::1/128 [0/0]
+     via GigabitEthernet0/0/1, receive
+O   2002:2::/64 [110/65]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:3::/64 [110/65]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:4::/64 [110/193]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:5::/64 [110/193]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:6::/64 [110/257]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:7::/64 [110/257]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:8::/64 [110/257]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:9::/64 [110/257]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:10::/64 [110/193]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:11::/64 [110/193]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:12::/64 [110/193]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:13::/64 [110/193]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:14::/64 [110/257]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+O   2002:15::/64 [110/257]
+     via FE80::2D0:58FF:FE36:14C1, Serial0/1/0
+L   FF00::/8 [0/0]
+     via Null0, receive

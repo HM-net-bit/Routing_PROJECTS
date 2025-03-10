@@ -1,0 +1,82 @@
+Router R4
+
+OS Version: 15.4
+
+Hostname: R4
+
+IPv6 Routing: Enabled
+
+OSPF Configuration:
+	Router ID: 4.4.4.4
+	Interfaces in OSPF Area 0
+
+Interfaces:
+	GigabitEthernet0/0/0 - IPv6: 2002:6::1/64
+	GigabitEthernet0/0/1 - IPv6: 2002:7::1/64
+	Serial0/1/1 - IPv6: 2001:4::2/64
+
+Authentication:
+	Enable Password: r4
+	Console Password: r4
+	SSH Username: adminr4
+	SSH Password: r4r4r4
+
+Security: Password encryption enabled, SSH access enabled
+
+Routing table:
+O   2001:1::/64 [110/256]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2001:2::/64 [110/192]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2001:3::/64 [110/128]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+C   2001:4::/64 [0/0]
+     via Serial0/1/1, directly connected
+L   2001:4::2/128 [0/0]
+     via Serial0/1/1, receive
+O   2001:5::/64 [110/256]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2001:6::/64 [110/192]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2001:7::/64 [110/192]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2001:8::/64 [110/256]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002::/64 [110/257]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:1::/64 [110/257]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:2::/64 [110/193]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:3::/64 [110/193]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:4::/64 [110/65]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:5::/64 [110/65]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+C   2002:6::/64 [0/0]
+     via GigabitEthernet0/0/0, directly connected
+L   2002:6::1/128 [0/0]
+     via GigabitEthernet0/0/0, receive
+C   2002:7::/64 [0/0]
+     via GigabitEthernet0/0/1, directly connected
+L   2002:7::1/128 [0/0]
+     via GigabitEthernet0/0/1, receive
+O   2002:8::/64 [110/257]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:9::/64 [110/257]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:10::/64 [110/193]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:11::/64 [110/193]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:12::/64 [110/193]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:13::/64 [110/193]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:14::/64 [110/257]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+O   2002:15::/64 [110/257]
+     via FE80::260:3EFF:FE9A:5A80, Serial0/1/1
+L   FF00::/8 [0/0]
+     via Null0, receive

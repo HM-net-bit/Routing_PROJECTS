@@ -1,0 +1,44 @@
+1. Ping from PC1 to interface Gig0/0/1 of Router's 5
+C:\>ping 2002:15::1
+
+Pinging 2002:15::1 with 32 bytes of data:
+
+Reply from 2002:15::1: bytes=32 time=48ms TTL=251
+Reply from 2002:15::1: bytes=32 time=39ms TTL=251
+Reply from 2002:15::1: bytes=32 time=39ms TTL=251
+Reply from 2002:15::1: bytes=32 time=35ms TTL=251
+
+Ping statistics for 2002:15::1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 35ms, Maximum = 48ms, Average = 40ms
+
+2. Ping from PC2 to interface Gig 0/0/1 of Router's 6
+C:\>ping 2002:13::1
+
+Pinging 2002:13::1 with 32 bytes of data:
+
+Reply from 2002:13::1: bytes=32 time=18ms TTL=253
+Reply from 2002:13::1: bytes=32 time=17ms TTL=253
+Reply from 2002:13::1: bytes=32 time=16ms TTL=253
+Reply from 2002:13::1: bytes=32 time=20ms TTL=253
+
+Ping statistics for 2002:13::1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 16ms, Maximum = 20ms, Average = 17ms
+
+3. Ping from PC8 to interface Gig0/0/0 of Router's 1
+C:\>ping 2002::1
+
+Pinging 2002::1 with 32 bytes of data:
+
+Reply from 2002::1: bytes=32 time=36ms TTL=251
+Reply from 2002::1: bytes=32 time=36ms TTL=251
+Reply from 2002::1: bytes=32 time=39ms TTL=251
+Reply from 2002::1: bytes=32 time=41ms TTL=251
+
+Ping statistics for 2002::1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 36ms, Maximum = 41ms, Average = 38ms
