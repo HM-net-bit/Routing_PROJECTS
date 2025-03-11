@@ -1,0 +1,21 @@
+Switch SW0
+
+OS Version: 16.3.2
+
+Hostname: SW0
+
+VLAN Configuration:
+	VLAN 6 - Assigned to GigabitEthernet1/0/6
+	VLAN 7 - Assigned to GigabitEthernet1/0/7
+	VLAN 8 - Assigned to GigabitEthernet1/0/8 (Shutdown)
+	VLAN 40 - IP: 192.168.40.2/24
+
+Default Gateway: 192.168.40.1
+
+Authentication:
+	Enable Password: sw0
+	Console Password: sw0
+	SSH Username: adminsw0
+	SSH Password: sw0sw0sw0
+
+Security: Password encryption enabled, SSH access enabled

@@ -1,0 +1,32 @@
+1. SSH connection from PC2 to SW0
+C:\>ssh -l adminsw0 192.168.40.2
+
+Password: 
+
+Password: 
+
+
+
+SW0>
+
+2. SSH connection from PC2 to R1
+C:\>ssh -l adminr1 10.0.0.1
+
+Password: 
+
+Password: 
+
+
+
+R1>
+
+3. SSH connection from PC6 to SW3
+C:\>ssh -l adminsw3 192.168.10.2
+
+Password: 
+
+Password: 
+
+
+
+SW3>

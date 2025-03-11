@@ -1,0 +1,20 @@
+Switch SW2
+
+OS Version: 16.3.2
+
+Hostname: SW2
+
+VLAN Configuration:
+	VLAN 2 - Assigned to GigabitEthernet1/0/2
+	VLAN 3 - Assigned to GigabitEthernet1/0/3
+	VLAN 20 - IP: 192.168.20.2/24
+
+Default Gateway: 192.168.20.1
+
+Authentication:
+	Enable Password: sw2
+	Console Password: sw2
+	SSH Username: adminsw2
+	SSH Password: sw2sw2sw2
+
+Security: Password encryption enabled, SSH access enabled

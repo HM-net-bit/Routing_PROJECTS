@@ -1,0 +1,19 @@
+Switch SW3
+
+OS Version: 16.3.2
+
+Hostname: SW3
+
+VLAN Configuration:
+	VLAN 8 - Assigned to GigabitEthernet1/0/8
+	VLAN 10 - IP: 192.168.10.2/24
+
+Default Gateway: 192.168.10.1
+
+Authentication:
+	Enable Password: sw3
+	Console Password: sw3
+	SSH Username: adminsw3
+	SSH Password: sw3sw3sw3
+
+Security: Password encryption enabled, SSH access enabled
